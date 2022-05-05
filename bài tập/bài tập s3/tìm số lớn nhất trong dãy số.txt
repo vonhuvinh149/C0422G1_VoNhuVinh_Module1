@@ -1,0 +1,12 @@
+START
+ INPUT (a1,a2,...,an)
+  MAX = a1 , i = 2
+WHILE(i<=N)
+DO
+  IF (ai>MAX)
+   MAX = ai
+  END IF
+  i = i + 1  
+ END DO
+ Display MAX
+END

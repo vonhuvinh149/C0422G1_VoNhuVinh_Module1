@@ -1,0 +1,7 @@
+BEGIN
+    INPUT a = Math
+          b = Physics
+          c = Chemistry
+    verage = (a+b+c)/3
+    DISPLAY verage 
+END
