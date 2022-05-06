@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo form co ban</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            margin: 40px auto;
+            padding-left: 20px;
+            width: 420px;
+            height:500px;
+            border: 1px solid #000;
+            box-shadow: 1px 1px 1px 5px #498391;
+
+        }
+        b{
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+   <div>
+     <h1>Order</h1>
+       <p><b>What would you like to buy?</b></p>
+     <select>
+             <option value="">A</option>
+             <option>B (+ 0,5$)</option>
+             <option>B (+ 0,5$)</option>
+     </select>
+     <p> </b>How many would you like to order?</b></p>
+     <form>
+         <p>
+         <input type="radio" name="tien_do"/>1-$10<br/>
+         <input type="radio" name="tien_do"/>2-$20<br/>
+         <input type="radio" name="tien_do"/>3-$25
+         </p>
+         <p>
+             <b>Name</b><br/>
+             <input type="text" name="firstname" placeholder="FirstName" />
+             <input type="text" name="lastname" placeholder="LastName" />
+         </p>
+         <p>
+             <b>Email</b><br/>
+             <input type="email" name="email"/>
+         </p>
+         <p>
+             <b>Phone Number</b><br/>
+             <input type="text" name="phone1" size="5"/>-
+             <input type="text" name="phone2" size="5"/>-
+             <input type="text" name="phone3" size="5"/>
+         </p>
+         <button type="submit">Submit</button>
+     </form>
+   </div>
+
+
+
+</body>
+</html>
