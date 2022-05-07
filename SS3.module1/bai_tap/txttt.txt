@@ -1,8 +1,0 @@
-Begin
-         INPUT  a = điểm toán
-                b = điểm lý
-                c = điểm hoá
-
-                Average = (a+b+c) / 3
-           DISPLAY Average
-End

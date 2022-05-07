@@ -1,5 +1,0 @@
-BEGIN
-   INPUT $1 = 23000 vnđ 
-   VND = $1 * 23000 (Việt Nam đồng)
-   DISPLAY VND
-END
