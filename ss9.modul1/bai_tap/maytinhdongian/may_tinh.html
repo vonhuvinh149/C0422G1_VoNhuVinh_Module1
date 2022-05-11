@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>máy tính casio</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+
+
+
+        }
+        .div1{
+            margin: 30px auto;
+            border-radius: 18px;
+            width: 191px;
+            background-color: #FF9999;
+            height: 345px;
+            box-shadow:7px 7px 2px #858C88;
+        }
+        .div2{
+            margin: 0 auto;
+            border-radius: 18px 18px 10px 10px;
+            width: 185px;
+            background-color: lightpink;
+            height: 335px;
+            border: 1px solid #AAAAAA;
+        }
+        table{
+            margin: auto;
+            background-color: lightpink;
+            width: 170px;
+
+
+        }
+        .bang_1 button {
+            padding: 0;
+            background-color: lightpink;
+            width: 23px;
+            font-size: 8px;
+            font-weight: normal;
+            border:1px solid #FFF;
+            box-shadow: 4px 2px 5px #000;
+            border-radius: 5px;
+            color: #FFFFFF;
+        }
+        .bang_2 button:hover{
+            background-color: #FF9999;
+            border: 1px solid #FFFFFF;
+            border-radius: 3px;
+            color:red;
+        }
+        .p1{
+            border: 7px solid #FF9999;
+            border-radius: 5px;
+        }
+        input{
+            width: 97%;
+            height: 19px;
+            background-color: #858C88;
+            border: 1px solid #858C88;
+
+
+        }
+        .bang_2 button{
+            padding: 0;
+            width: 28px;
+            box-shadow: 4px 2px 5px #000;
+        }
+        span{
+            color:#9B9E9E;
+
+        }
+        .bt{
+            background-color: darkorange;
+            border-radius: 2px;
+            border: 1px solid #858C88;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="div1">
+    <div class="div2">
+        <span>CASIO</span><br/>
+        <table class="bang_1" >
+            <tr>
+                <th colspan="6"><p class="p1">
+                    <input id="view" type="text">
+                    <input type="text" id="ketqua" style="text-align: right;"/></p>
+                </th>
+            </tr>
+            <tr>
+                <th><button >.</button></th>
+                <th><button >.</button></th>
+                <th colspan="2" rowspan="2">
+                    <button type="button" style="background-color: lightpink; width: 33px;height:33px;border-radius:5px;transform: rotate(45deg);" >o</button>
+                </th>
+
+                <th><button >OFF</button></th>
+                <th><button >ON</button></th>
+            </tr>
+            <tr>
+
+                <th><button>Optn</button></th>
+                <th><button>Calc</button></th>
+                <th><button>%</button></th>
+                <th><button>X</button></th>
+
+            </tr>
+            <tr>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+            </tr>
+            <tr>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+            </tr>
+            <tr>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+                <th><button>.</button></th>
+            </tr>
+        </table>
+        <table class="bang_2" cellpadding="3" cellspacing="0" >
+            <tr>
+                <th><button type="button" name="so" value="7" onclick="nhapValue(this.value)">7</button></th>
+                <th><button type="button" name="so" value="8" onclick="nhapValue(this.value)">8</button></th>
+                <th><button type="button" name="so" value="9" onclick="nhapValue(this.value)">9</button></th>
+                <th><button type="button" class="bt" >Del</button></th>
+                <th><button type="button" class="bt" name="xoa"  onclick="xoa()">AC</button></th>
+
+            </tr>
+            <tr>
+                <th><button type="button" name="so" value="4" onclick="nhapValue(this.value)">4</button></button></th>
+                <th><button type="button" name="so" value="5" onclick="nhapValue(this.value)">5</button></th>
+                <th><button type="button" name="so" value="6" onclick="nhapValue(this.value)">6</button></th>
+                <th><button type="button" name="so" value="*" onclick="nhapValue(this.value)">x</button></th>
+                <th><button type="button" name="op" value="/" onclick="nhapValue(this.value)">÷</button></th>
+
+            </tr>
+            <tr>
+                <th><button type="button" name="so" value="1" onclick="nhapValue(this.value)">1</button></th>
+                <th><button type="button" name="so" value="2" onclick="nhapValue(this.value)">2</button></th>
+                <th><button type="button" name="so" value="3" onclick="nhapValue(this.value)">3</button></th>
+                <th><button type="button" name="op" value="+" onclick="nhapValue(this.value)">+</button></th>
+                <th><button type="button" name="op" value="-" onclick="nhapValue(this.value)">-</button></th>
+            </tr>
+            <tr>
+                <th><button type="button" name="so" value="0" onclick="nhapValue(this.value)">0</button></th>
+                <th><button>.</button></th>
+                <th><button>x10</button></th>
+                <th><button>Ans</button></th>
+                <th><button type="button" name="result"  onclick="result()">=</button></th>
+
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script src="maytinhdongian.js">
+
+
+</script>
+
