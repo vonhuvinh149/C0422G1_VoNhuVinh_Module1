@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Tính lãi ngân hàng</h3>
+<input type="text" placeholder=" tiền vay" id="tien"><sp>  Đồng</sp><br><br>
+<input type="text" placeholder=" tháng vay" id="month"><span>  Tháng</span><br><br>
+<input type="text" placeholder="lãi suất tháng" id="interestRate"><span> %</span><br><br>
+<input type="button" onclick="showMessage()" value="Tính">
+<p id="result">Kết quả:</p>
+<script>
+    function showMessage() {
+        let debt = parseInt(document.getElementById("tien").value);
+        let month = document.getElementById("month").value;
+        let interestRate = (document.getElementById("interestRate").value)/100;
+        let i = 1;
+        while (i <= month){
+            i += 1;
+            debt = debt + debt * interestRate;
+        }
+        document.getElementById("result").innerText = "Kết quả: số tiền phải trả sau " + month + " tháng là " + debt + "Đ";
+    }
+</script>
+
+</body>
+</html>

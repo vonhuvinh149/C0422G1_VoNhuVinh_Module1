@@ -2,7 +2,7 @@ let number = '';
 let i ;
 for (i=1 ; i<=5 ; i++){
     number += '*'
-    document.write('<p>' + number+'</p>')
+    document.write( number+'<br>')
 }
 number =''
 for (i=1;i<=5;i++){
