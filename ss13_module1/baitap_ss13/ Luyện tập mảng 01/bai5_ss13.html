@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập vào một chuỗi")
+    let count = 0
+    let arr = str.split()
+    document.write(arr.join())
+    for (let i = 0; i<arr.length-1;i++){
+        if(arr[i] == "-" && (arr[i-1]/arr[i-1])==1){
+            count++
+        }
+    }
+    document.write("số lượng nguyên âm ở trong chuổi là: " + count)
+</script>
+
+</body>
+</html>

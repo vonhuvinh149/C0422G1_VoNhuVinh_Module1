@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [5,9,71,3,98,45,65,32,2,2]
+    let max = 0;
+    let sum = 0;
+    for (let i= 0 ; i < arr.length ; i++){
+        if (max < arr[i]){
+           max = arr[i]
+        }
+        sum += arr[i]
+    }document.write('số lớn nhất trong mảng là: ' + max +'<br>')
+    document.write('trung bình các số trong mảng là: '+ sum/arr.length)
+</script>
+
+</body>
+</html>

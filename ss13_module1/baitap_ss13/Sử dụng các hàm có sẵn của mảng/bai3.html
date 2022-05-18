@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let language = prompt();
+    let vietKey = 'QWERTYUIOPASDFGHJKLZXCVBNM'
+    let unKey = 'qwertyuiopasdfghjklzxcvbnm'
+    let result = [] ;
+    for (let i = 0 ; i < language.length ; i++){
+        if (vietKey.indexOf(language[i]) !== -1){
+            result.push(language.toLowerCase())
+        }else if(unKey.indexOf(language[i]) !== -1){
+            result.push(language.toUpperCase())
+        }else {
+            result.push(language[i])
+        }
+    }document.write(result.join())
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let arr = []
+    let i;
+    for(i = 0 ; i < 10 ; i++){
+        arr[i] = prompt('nhập vào phần tử của mảng')
+    }document.write('array = ['+arr+'] <br/>')
+
+    let V = prompt('---nhập số cần kiểm tra---')
+    for (i = 0 ; i < arr.length ;i++){
+        if ( V ==arr[i]){
+            document.write('V is in the array')
+            break ;
+        }
+        if (i == 9){
+            document.write('V is not in the array')
+        }
+    }
+</script>
+</body>
+</html>

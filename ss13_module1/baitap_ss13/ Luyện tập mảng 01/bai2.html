@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [65,9,34,67,12,45,65,32,2,2]
+    let max = 0;
+    let index ;
+    for (let i = 0; i < arr.length ; i++){
+        if (max < arr[i] ) {
+            max = arr[i]
+            index = i
+        }
+    }document.write('số lớn nhất trong dãy số là: '+ max + ' và ở vị trí ' + index)
+</script>
+
+</body>
+</html>
