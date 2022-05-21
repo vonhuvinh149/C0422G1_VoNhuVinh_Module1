@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function showMessage() {
+          for (let i = 0 ; i< length ; i++){
+              arr[i] = prompt('nhập giá trị phần tử trong mảng')
+          }document.write('arr = [ '+ arr + '] <br>')
+            let num = prompt('nhập kí tự bất kì')
+            let count = 1 ;
+           for (let i = 0 ; i < arr.length ; i++){
+            if (num === arr[i]){
+                document.write(num + ' có trong mảng' + count + 'lần')
+            }else {
+                document.write('-1')
+                break;
+            }
+        }
+    }
+    let length = prompt('nhập độ dài của mảng')
+    let arr = []
+    showMessage()
+</script>
+</body>
+</html>

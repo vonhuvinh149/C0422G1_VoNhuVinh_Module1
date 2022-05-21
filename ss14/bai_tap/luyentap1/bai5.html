@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus']
+    let myArr = ['Ursa Minor','Tarurus','Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo']
+    let count = 0;
+    function showMessage() {
+        let check = prompt('nhập ngôi sao cần tìm')
+    for (let i = 0 ; i < arr.length ; i++){
+        if (arr[i] === check){
+            document.write(myArr[i] + ' là ngôi sao cần tìm')
+            count++ ;
+            break
+        }
+        }if (count === 0){
+            document.write('không tìm thấy')
+        }
+    }
+    showMessage()
+</script>
+</body>
+</html>

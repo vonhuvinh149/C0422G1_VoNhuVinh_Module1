@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function meterToFoot(meTer) {
+         let Foot = meTer * 3.279 ;
+         return Foot ;
+    }
+    function footToMeter(Foot) {
+        let  meTer = Foot * 0.305 ;
+          return meTer ;
+    }
+    let Foot = prompt('nhập ')
+    document.write(Foot + ' foot = ' + footToMeter(Foot) + 'meter <br>')
+    let meTer = prompt('nhap')
+    document.write(meTer + ' meter = ' + meterToFoot(meTer) +  ' foot ')
+</script>
+</body>
+</html>

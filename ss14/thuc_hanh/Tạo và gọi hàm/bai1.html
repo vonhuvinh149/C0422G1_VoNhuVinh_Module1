@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function processConfirm(answer) {
+        let result ;
+        if (answer) {
+            result = "bạn có muốn dùng dao không";
+        } else {
+            result = "bạn bê đê à ";
+        }
+        return result;
+    }
+    let confirmAnswer = confirm(" Bạn thích chém nhau không ");
+    let soLo= processConfirm(confirmAnswer);
+    alert(soLo)
+</script>
+</body>
+</html>

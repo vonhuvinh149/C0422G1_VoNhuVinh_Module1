@@ -6,27 +6,25 @@
 </head>
 <body>
 <input type="text" name="" id="string">
-<button onclick="transcript()">Dịch</button>
+<button onclick="dictionary()">Dịch</button>
 <p id="result"></p>
 <script>
-    function transcript() {
-        let
-            engLish = ["red", "yellow", "orange", "black", "blue", "white"];
-        let keyViet = ["đỏ", "vàng", "cam", "đen", "xanh", "trắng"];
-        let string = document.getElementById("string").value;
-        let index_eng = 0;
-        let result = "";
-        for (let i = 0; i < arr_eng.length; i++) {
-            if (string == arr_eng[i]) {
-                index_eng = i; //2
-                for (let j = 0; j < arr_vie.length; j++) {
-                    if (index_eng == j) {
-                        result = arr_vie[j];
-                    }
-                }
+    let eng = ["black", "blue", "red", "green", "yellow", "pink", "brown","huy"]
+    let vie = ["màu đen", "màu xanh dương", "màu đỏ", "màu xanh lá cây", "màu vàng", "màu hồng", "màu nâu","óc chó"]
+    let count =0
+    console.log(eng)
+    function dictionary() {
+        let check = document.getElementById("string").value
+        for (let i = 0; i<eng.length;i++){
+            console.log(check)
+            if(check == eng[i]){
+                document.getElementById("result").innerText = "Result: " + vie[i]
+                count++
+                break
             }
+        }if(count == 0){
+            document.getElementById("result").innerText = "Result: Từ bạn nhập chưa có trong từ điển" +vie[i]
         }
-        document.getElementById("result").innerHTML = result;
     }
 </script>
 
