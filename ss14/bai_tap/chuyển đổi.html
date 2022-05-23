@@ -6,18 +6,20 @@
 </head>
 <body>
 <script>
-    function meterToFoot(meTer) {
-         let Foot = meTer * 3.279 ;
-         return Foot ;
+    function meterToFoot(meter) {
+         let Foot = meter * 3.279 ;
+         document.write(meter + ' meter = ' + Foot + ' foot <br>')
     }
+    let num1 = prompt('nhập meter')
+    meterToFoot(num1)
+
     function footToMeter(Foot) {
         let  meTer = Foot * 0.305 ;
-          return meTer ;
+    document.write(Foot + ' Foot = ' + meTer +  ' meTer ')
     }
-    let Foot = prompt('nhập ')
-    document.write(Foot + ' foot = ' + footToMeter(Foot) + 'meter <br>')
-    let meTer = prompt('nhap')
-    document.write(meTer + ' meter = ' + meterToFoot(meTer) +  ' foot ')
+    let num2 = prompt('nhap foot')
+    footToMeter(num2)
+
 </script>
 </body>
 </html>

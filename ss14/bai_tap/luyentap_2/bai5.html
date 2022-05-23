@@ -6,20 +6,21 @@
 </head>
 <body>
 <script>
-    function showMessage() {
-        if (a<b && a < c) {
+    let min ;
+    function myMin(a , b , c) {
+        if (a < b && a < c) {
             min = a
         } if(a >b && c > b){
                 min = b
-            }if (c <a && c < b){
+            }if (c < a && c < b){
             min = c
         }
         document.write('số nhỏ nhất là ' + min)
     }
-    let a = prompt('nhập số a')
-    let b = prompt('nhập số b')
-    let c = prompt('nhập số c')
-    showMessage()
+    let x = prompt('nhập số a')
+    let y = prompt('nhập số b')
+    let z = prompt('nhập số c')
+    myMin(x , y , z)
 </script>
 
 </body>

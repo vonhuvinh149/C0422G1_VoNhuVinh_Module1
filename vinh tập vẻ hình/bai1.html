@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    // vẻ hình chư nhật rỗng
+    // let m = prompt('nhập chiều dài')
+    // let n = prompt('nhập chiều rộng')
+    // for (let i = 0 ; i < m ; i++) {
+    //     for (let j = 0; j < n; j++) {
+    //         if (i === 0 || j === 0 || i === m - 1 || j === n - 1) {
+    //             document.write(' * ')
+    //         }else {
+    //             document.write(' &nbsp;&nbsp;')
+    //         }
+    //     }document.write('<br>')
+    // }
+
+
+
+    //Vẽ tam giác cân rỗng có chiều cao h
+    let h = prompt('nhập chiều cao')
+    let k = h -1
+    let i ;
+    for ( i = 0 ; i < h -1 ; i++){
+        for (let j = 0 ; j < 2 * h -1 ; j ++ ){
+            if (j === k -i || j === k + i){
+                document.write(' * ')
+            }else {
+                document.write(' &nbsp;&nbsp;')
+            }
+        }document.write('<br>')
+    }
+    for ( i = 0 ; i <2 * h - 1; i++ ){
+        document.write(' * ')
+    }
+
+</script>
+
+
 </body>
 </html>

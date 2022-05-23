@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function showMessage(length) {
+        for (let i = 0 ; i< length ; i++){
+          arr[i] = prompt('nhập giá trị của mảng')
+          }document.write('arr = [ ' + arr + ' ] <br>')
+        let  check = prompt('nhập kí tự bất kì')
+        count = 0 ;
+        for (let j = 0 ; j < arr.length ; j++){
+            if (check === arr[j]){
+                count++
+            }
+        } document.write(check + ' xuất hiện ' + count + ' lần')
+        if (count === 0){
+            alert('-1')
+        }
+    }
+    let num = prompt('nhập độ dài của mảng')
+    let arr = []
+    showMessage(num)
+</script>
+</body>
+</html>

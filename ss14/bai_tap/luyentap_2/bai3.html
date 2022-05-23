@@ -7,14 +7,13 @@
 <body>
 <script>
     let proDuct = 1 ;
-    let N = prompt('nhâp số nguyên bất kì')
-    function showMessage() {
+    let num = prompt('nhâp số nguyên bất kì')
+    function myNumber(N) {
           for (let i = 1 ; i < N ; i++){
               proDuct += proDuct * i
           }document.write(N +'! = ' +proDuct)
     }
-    showMessage()
+    myNumber(num)
 </script>
-
 </body>
 </html>

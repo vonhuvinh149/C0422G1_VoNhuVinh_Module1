@@ -1,7 +1,9 @@
-let fibonacci = 1
-let j = 0
-for (let i = 0; i < 20; i++) {
-    document.write(fibonacci + "<br>")
-    fibonacci += j
-    j = fibonacci - j
+let numBer = prompt('nhập số' )
+for (let i = 0 ; i < numBer ; i++){
+    for (let j = 2 ;j < i ; j ++ ){
+        if ( i % j !== 0){
+            document.write(i + ' <br>')
+            break ;
+        }
+    }
 }

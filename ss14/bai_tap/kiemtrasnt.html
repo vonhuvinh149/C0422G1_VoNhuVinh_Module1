@@ -8,37 +8,10 @@
 </head>
 <body>
 <script>
-    // let number = parseInt(prompt("Nhập số cần check "));
-    // isPrime(number)
-    //
-    // function isPrime(number){
-    //     let count = 0; // đếm số ước của số đang check
-    //     let isPrime = false;
-    //
-    //     if (number == 0) {
-    //         alert(number + " không là số nguyên tố")
-    //     } else {
-    //         for ( let i = 1; i <= number; i++) {
-    //             if(number % i == 0) {
-    //                 count += 1;
-    //             }
-    //         }
-    //         if (count ==2 ) {
-    //             isPrime = true
-    //         }
-    //
-    //         if (isPrime) {
-    //             alert(number + " là số nguyên tố")
-    //         } else {
-    //             alert (number + " không là số nguyên tố")
-    //         }
-    //     }
-    //}
-    let num = parseInt(prompt('nhập số cần kiểm tra'));
-    numBer(num)
+
     function numBer(num) {
         let count = 0 ;
-        let numBer = false ;
+        let number = false ;
         if (num === 0){
             alert(num + ' không phải số nguyên tố')
         } else {
@@ -48,15 +21,17 @@
                 }
             }
             if (count === 2) {
-                numBer = true
+                number = true
             }
-            if (numBer){
+            if (number){
                 alert(num + ' là só nguyên tố')
             }else {
                 alert(num + ' không phải nố nguyên tố')
             }
         }
     }
+    let input = parseInt(prompt('nhập số cần kiểm tra'));
+    numBer(input)
 
 
 
