@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class XayDungDate{
+        constructor(day , month , year) {
+            this.Day = day
+            this.Month = month
+            this.Year = year
+        }
+        Date(){
+            alert(this.Day + ' / '+this.Month+' / ' + this.Year)
+        }
+    //     //getter - trả về giá trị thuộc tính
+    //     getDay(){
+    //         return this.Day
+    //     }
+    //     //setter - cập nhật giá trị của thuộc tính
+    //     setDay(...){
+    //         this.Day = ...;
+    //     }
+    }
+    let full_information = new XayDungDate('12' , '7','1991')
+    full_information.Date();
+    alert(full_information.Day)
+</script>
+
+</body>
+</html>

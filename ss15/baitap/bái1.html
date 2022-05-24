@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" > </canvas>
+<script>
+    class Rectangle{
+        constructor(height , width) {
+            this.Height = height
+            this.Width = width
+        }
+        getHeight(){
+            return this.Height ;
+        }
+        getWidth(){
+            return this.Width
+        }
+        // setHeight(height){
+        //     this.Height = height
+        // }
+        // setWidth (width){
+        //     this.Width = width
+        // }
+        getArea(){
+            return this.Height * this.Width
+        }
+        getPerimeter(){
+            return ((this.Height + this.Width) * 2)
+        }
+    }
+    let a = parseInt(prompt('nhập độ dài'))
+    let b = parseInt(prompt('nhập đọ rộng'))
+    let myRectangle = new Rectangle(a , b)
+    let height = myRectangle.getHeight();
+    let width = myRectangle.getWidth();
+    alert('diện tích là  : ' + myRectangle.getArea() + ' cm2 ')
+    alert('chu vi là : ' + myRectangle.getPerimeter() + ' cm')
+    let myCanvas = document.getElementById('myCanvas');
+    let ctx = myCanvas.getContext("2d");
+    ctx.fillStyle = "#FF0000"
+    ctx.fillRect(50 , 50 , 300 , 200)
+</script>
+</body>
+</html>
+
+/* createLinearGradient()
+
+*/
