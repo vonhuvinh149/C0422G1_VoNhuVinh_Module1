@@ -18,5 +18,4 @@
     numBer++;
     divisor = 0;
     }
-    } else {
-}
+    }

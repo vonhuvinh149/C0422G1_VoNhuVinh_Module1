@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 3: Cho một danh sách các phân số, hãy tìm chỉ số của phân số lớn nhất (đếm từ 0)
+    // Giả định rằng không có các phân số bằng nhau trong tập đầu vào
+    // Ví dụ: numerators = [5, 2, 5] và denominators = [6, 3, 4], thì kết quả maxFraction(numerators,
+    //     denominators) = 2.
+    let length = prompt('nhập độ dài của mảng')
+    let i;
+    let arr = []
+    for (i = 0; i < length; i++) {
+        arr[i] = prompt('nhap gia tri phan tu tai vi tri ' + i + ' cua mang arr')
+    }
+    document.write('arr = [ ' + arr + ' ] <br> ')
+
+    let j;
+    let arr1 = []
+    for (j = 0; j < length; j++) {
+        arr1[j] = prompt('nhap gia tri phan tu tai vi tri ' + j + ' cua mang arr1')
+    }
+    document.write('arr1 = [ ' + arr1 + ' ] <br> ')
+    let max = 0;
+    for (i = 0; i < length; i++) {
+        if ((arr[i]) / (arr1[i]) > max) {
+            max = arr[i] / arr1[i]
+        }
+    }
+    let count = 0
+    let a;
+    let b;
+    for (j = 0; j < length; j++) {
+        if (arr[j] / arr1[j] === max) {
+            a = arr[j]
+            b = arr1[j]
+            break
+        }
+        count++
+    }
+    document.write('phân số lớn nhất là : '+a + ' / ' + b + ' <br>tại index =  ' + count+'<br>')
+    document.write('có giá trị là : ' + max )
+</script>
+
+</body>
+</html>

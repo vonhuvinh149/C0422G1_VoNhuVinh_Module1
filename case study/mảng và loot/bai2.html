@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // : Cho 2 mảng A và B chứa số nguyên. Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại
+    // không xuất hiện A
+    // Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện
+    // Ví dụ:  A=[7,2,5,3,5,3] và B=[7,2,5,4,6,3,5,3] thì kết quả missingValue(A, B) = [4, 6]
+    //
+
+
+    let i ;
+    let lengthA = prompt('nhập độ dài của mảng A')
+    let A = []
+    for ( i = 0 ; i <  lengthA ; i++){
+        A[i] = prompt('nhập giá trị phần tử của mảng A')
+    }document.write(' A = [ '+A+ ' ] <br>')
+
+    let j ;
+    let lengthB = prompt('nhập độ dài của mảng B')
+    let B = []
+    for ( j = 0 ; j <  lengthB ; j++){
+        B[j] = prompt('nhập giá trị phần tử của mảng B')
+    }document.write(' B = [ '+ B + ' ] <br>')
+
+    let C = []
+        for (let index  = 0 ; index < B.length ; index++){
+            if (A.indexOf(B[index]) === -1 ){
+                if (C.indexOf(B[index]) === -1)   // cái này để xoá phần tử trùng nhau .... vì indexof() chỉ tìm thấy phần tử đầu tiên
+                C.push(B[index])
+            }
+        }document.write('C = [ '+ C + ' ]')
+
+
+
+
+</script>
+</body>
+</html>

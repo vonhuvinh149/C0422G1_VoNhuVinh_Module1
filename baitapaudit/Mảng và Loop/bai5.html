@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        #result{
+            color: red;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        span {
+
+            font-size: 24px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<ol id="total">
+    <li >Nước cam</li>
+    <li >Nước dừa</li>
+    <li >Sinh tố</li>
+    <li >Bò húc</li>
+    <li >Cà Phê</li>
+    <li >Nước chanh</li>
+    <li >Nước lọc</li>
+    <li >Sữa</li>
+</ol>
+<form>
+    <label for="nhap">
+        <span> Chọn Đồ Uống </span> <br>
+    </label>
+    <input type="number" id="nhap" placeholder="Nhập mả số "/><br>
+    <label for="soluong">
+        <span> Số lượng </span><br>
+    </label>
+    <input type="number" id="soluong" placeholder="nhập số lượng"/><br>
+    <p><button type="button" onclick="showMessage()">Tổng Tiền</button></p>
+</form>
+<p id="result"> </p>
+<script>
+
+
+</script>
 </body>
 </html>

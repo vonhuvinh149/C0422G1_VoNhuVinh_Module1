@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 4: Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ.
+    //     Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.
+    let arr1 = ['1','2','3','4','5','6','7','8','9','0']
+    let arr2 = ['Một', 'Hai', 'Ba', 'Bốn', 'Năm', 'Sáu', 'Bảy', 'Tám', 'Chin', 'Không']
+    let str = prompt('nhập số bất kì')
+    let arr3 = str.split('')
+    for (let i = 0; i < arr3.length; i++) {
+        for (let j = 0 ; j < arr1.length ; j++){
+            if (arr1[j] === arr3[i]){
+                document.write(arr2[j])
+            }
+        }
+    }
+</script>
+</body>
+</html>

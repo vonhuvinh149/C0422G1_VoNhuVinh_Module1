@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    // tam giác vuông cân rỗng
+    let h = prompt('nhập chiều cao')
+    for (let i = 0 ; i < h ; i++){
+        for (let j = 0 ; j < i ; j++){}
+        if (i == 0 || j == 0 || j == i -1){
+            document.write(' * ')
+        }
+    }
+</script>
 </body>
 </html>

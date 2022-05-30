@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //kiểm tra xem số nhập vao có phải là kí tự số không
+    let number ;
+    do {
+        number = prompt('nhập số bất kì')
+        if (!isNaN(number)){
+            break;
+        }else{
+            alert('nhập lại số')
+        }
+    }while(isNaN(number))
+
+    function checkSNT() {
+        let flag = true
+               if (number < 2 ){
+                   flag = false  // khai báo biến cờ hiệu
+               }else {
+                   for (let i = 2 ; i < number ; i++){
+                       if (number % i === 0){
+                           flag = false
+                           break ;
+                       }
+
+                   }
+               }if (flag === true){
+                   document.write(number + ' là số nguyên tố')
+        }else{
+                   document.write(number + ' không phải số nguyên tố')
+        }
+    }
+    checkSNT()
+
+
+
+
+    // 2) viết chương trình in ra n số nguyên tố
+       let n = prompt('nhập số lượng số nguyên tố')
+    let flag ;
+       for (let i = 0 ; i < n ; i++){
+           if ()
+
+       }
+
+
+
+</script>
+</body>
+</html>

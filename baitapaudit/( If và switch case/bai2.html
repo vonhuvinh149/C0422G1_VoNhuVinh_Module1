@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let characters = prompt('nhập kí tự chữ bất kì ')
+    switch (characters) {
+        case 'o' :
+        case 'a' :
+        case 'u' :
+        case 'i' :
+        case 'e' :
+        case 'O' :
+        case 'A' :
+        case 'U' :
+        case 'I' :
+        case 'E' : document.write(characters+ ' là nguyên âm')
+            break;
+        default : document.write(characters + ' là phụ âm')
+    }
+</script>
+
 </body>
 </html>

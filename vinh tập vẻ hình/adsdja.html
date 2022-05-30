@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>MENU</h3>
+<p><ol>
+    <li> Cafe</li>
+    <li>Cam vắt</li>
+    <li>Nước ép cà rốt</li>
+    <li>Nước ép cà chua</li>
+    <li>Nước lọc</li>
+    <li> Nước dừa</li>
+</ol></p>
+<span>Nhập món cần chọn: </span>
+<select id="Menu" onchange="change()">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+</select>
+<p>Nhập số lượng cần mua</p>
+<input type="number" id="number">
+<button type="button" onclick="addbt()">Add</button>
+<p id="result"></p>
+<script>
+    arr1= [2000,3000,4000,5000,3000,2000]
+    function change(){
+        let a = document.getElementById("Menu").value
+        if (a==7) {
+            alert ('thoat chuong trinh')
+        }else {
+            alert(arr1[a-1])
+        }
+    }
+    function addbt() {
+        let a = document.getElementById("Menu").value
+        let b = document.getElementById("number").value
+        let sum = b*arr1[a-1]
+        document.getElementById('result').innerHTML = "Tổng số tiền cần trả là " + sum
+    }
+
+
+
+
+
+</script>
+
+</body>
+</html>
+

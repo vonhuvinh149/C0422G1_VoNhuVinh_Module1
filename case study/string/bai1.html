@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu
+    // cách liền nhau và bắt đầu mỗi từ phải in hoa. Ví dụ tRuong    TaN   HAI => Truong Tan Hai.
+    //     Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này để nhập
+    //     xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.
+
+
+
+
+  //viết tắt
+
+
+    // function chuanHoa(arr) {
+    //     let tmp ;
+    //     let kq = '';
+    //     if (arr.length ===1){  ///vo nhu vinh
+    //         alert('chuỗi chỉ có 1 từ mà viết tắt cái gì ba')
+    //     }else {
+    //         for (let i = 0; i < arr.length; i++) {   // duyệt mảng từ đầu tới cuối   ... nếu muốn đảo mảng thì duyệt ngược lại nka :v
+    //             tmp = arr[i].trim().toUpperCase();    // xoá dấu cách và chuyển thành chữ in hoa
+    //             if (tmp !== '') {                      // nếu arr[i] không có dấu cách thì thục hiện câu lệnh
+    //                 tmp = tmp.substr(0, 1)            // lấy kí tự đàu tiên  trong phần tử arr[i]
+    //                 kq += tmp                         // theo vòng lặp thực thi các phần tử còn lại
+    //             }
+    //         }
+    //         document.write(kq)
+    //     }
+    // }
+    // let str = prompt('nhâp chỗi')
+    //  let arr = str.trim().split(' ')
+    //  chuanHoa(arr)
+
+    let key = prompt('nhập chuỗi')
+    let arr = key.split(' ') // tách chuỗi thành mảng theo khoảng trắng
+
+
+    function chuanHoa() {
+        let kq = '';
+        let tmp;
+        for (let i = 0; i < arr.length; i++) {   // duyệt ngược từ phần tử cuối mảng về dầu để đảo chuỗi
+            tmp = arr[i].trim().toLowerCase();  // xoá khoảng trắng trước và sau từ ,chuyển về chữ thường
+            if (tmp !== "") {
+                tmp = tmp.substr(0, 1).toUpperCase() + tmp.substr(1)
+                kq += tmp + " "
+            }
+        }
+        document.write('Kết quả chuẩn hoá : ' + kq.trim() + '<br>')   // xoá khoang trắng cuối mảng
+    }
+    chuanHoa()
+    function daiNhat() {
+        let max = 0;
+        let x;
+        for (let j = 0; j < arr.length; j++) {
+            if (max < arr[j].length) {
+                max = arr[j].length
+                x = arr[j]
+            }
+        }
+        document.write('Từ dài nhất là ' + x)
+
+    }
+    daiNhat()
+
+</script>
+
+</body>
+</html>
+<!--indexOf()-->
+<!--lastIndexOf()-->
+<!--search()-->

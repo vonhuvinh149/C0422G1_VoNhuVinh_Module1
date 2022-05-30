@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+   let length = prompt('nhập độ dài mảng 1 ')
+    let arr = []
+   let arr1 = []
+    for (let i = 0 ; i < length ; i++){
+        arr[i] = prompt('nhập giá trị phần tử trong mảng 1')
+    }document.write('arr = [ ' + arr + ' ] <br>')
+    for (let j = 0 ; j < length ; j++){
+        arr1[j] = prompt('nhập giá trị phần tử mảng 2')
+    }document.write('arr1 = [ ' + arr1 + ' ] <br>')
+
+    let max = 0
+    let count = 0
+    for (let index = 0 ; index <  length ; index++){
+        if (max < (arr[index]/arr1[index]) ){
+            max = arr[index] / arr1[index]
+        }
+        count++
+    }document.write(max +' tại vị trí ' + count)
+</script>
 </body>
 </html>

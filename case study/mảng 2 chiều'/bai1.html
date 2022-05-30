@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   function total(m , n) {
+    let length = prompt('nhập độ dài mảng m')
+       let length1 = prompt('nhập độ dài mảng n')
+       for (let i = 0 ; i < length ; i++){
+            n = []
+           for (let j = 0 ; j < length1 ; j++){
+               n[j] = +prompt('nhập giá trị phần tử của mảng n thứ '+ (i+1) + ' tại vị trí '+ j)
+           }
+           m[i] = n
+       }document.write('m = [ ')
+       for (let k = 0 ; k < m.length ; k++){
+           document.write('[ '+ m[k] +' ]')
+       }document.write(' ] <br>')
+    let sum = 0
+    for (let j = 0; j < m.length; j++) {
+        for (let k = 0; k < n.length; k++) {
+            if (m[j][k] % 2 === 0) {
+                sum += m[j][k]
+            }
+        }
+    }
+    document.write('tổng các số chẵn trong ma trận là : ' + sum)
+   }
+   let a = []
+   let b = []
+    total(a , b)
+</script>
+
+</body>
+</html>

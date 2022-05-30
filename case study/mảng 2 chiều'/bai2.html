@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function sum(m, n) {
+        let length = prompt('nhập độ dài mảng m')
+        let length1 = prompt('nhập độ dài mảng n')
+        for (let i = 0 ; i < length ; i++){
+            n = []
+            for (let j = 0 ; j < length1 ; j++){
+                n[j] = +prompt('nhập giá trị phần tử của mảng n thứ '+ (i+1) + ' tại vị trí '+ j)
+            }
+            m[i] = n
+        }document.write('m = [ ')
+        for (let k = 0 ; k < m.length ; k++){
+            document.write('[ '+ m[k] +' ]')
+        }document.write(' ] <br>')
+    }
+    //// phần còn lại nhát làm quá :V
+    let a = []
+    let b = []
+    sum(a, b)
+
+
+</script>
+</body>
+</html>

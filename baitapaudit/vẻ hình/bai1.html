@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //vẻ hình chữ nhật rỗnng
+    let a = prompt('nhập chiều dài')
+    let b = prompt('nhập chièu rộng')
+    for (let i = 0 ; i < a ; i++){
+        for (let j =0 ; j < b ; j++){
+            if (i === 0 || j === 0 || i === a-1 || j === b -1){
+                document.write(' * ')
+            }else {
+                document.write(' &nbsp;&nbsp')
+            }
+        }document.write('<br>')
+    }
+</script>
 </body>
 </html>

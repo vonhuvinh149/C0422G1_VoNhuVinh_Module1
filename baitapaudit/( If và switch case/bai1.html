@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let vnd = prompt('nhập số tiền')
+    if (15000000 <= vnd ){
+        alert('số tiền thuế là ' + vnd * 20 / 100)
+    }else if (7000000 <= vnd < 15000000){
+        alert('số tiền thuế là ' + vnd * 10 / 100)
+    }else{
+        alert('số tiền thuế là '+ vnd * 5 / 100)
+    }
+</script>
 </body>
 </html>
