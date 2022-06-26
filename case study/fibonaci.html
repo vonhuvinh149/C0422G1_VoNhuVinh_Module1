@@ -1,0 +1,106 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>-->
+
+<!--    // Câu 3: Viết hàm có tham số truyền vào là một mảng ,tìm các số fibonaci có trong-->
+<!--    // mảng(số này đã làm bài tập ở jame). Hàm trả về 1 mảng số fibonaci được tìm thấy trong mảng ( Yêu cầu sắp xếp tăng dần).-->
+
+<!--    function fiBoNaCi(arr) {-->
+<!--        let max = arr[0]-->
+<!--        for (let i = 0 ; i < arr.length ; i++){-->
+<!--            if (arr[i] > max){-->
+<!--                max = arr[i]-->
+<!--            }-->
+<!--        }console.log(max)-->
+<!--        let a = 1-->
+<!--        let b = -1-->
+<!--        let array = []-->
+<!--        for (let i = 0; i < max + 1 ; i++) {-->
+<!--            a += b-->
+<!--            b = a - b-->
+<!--            array.push(a)-->
+<!--        }-->
+<!--        let arr2 = []-->
+<!--        for (let j = 0; j < arr.length; j++) {-->
+<!--            for (let k = 0; k < array.length; k++) {-->
+<!--                if (arr[j] === array[k]) {-->
+<!--                    arr2.push(arr[j])-->
+<!--                   break-->
+<!--                }-->
+<!--            }-->
+<!--        }document.write('arr2 = [ '+ arr2 +' ]')-->
+<!--    }-->
+<!--    let length = prompt('nhập độ dài mảng')-->
+<!--    let arr = []-->
+<!--    for (let index = 0; index < length; index++) {-->
+<!--        arr[index] = +prompt('nhập giá trị phần tử của mảng')-->
+<!--    }-->
+<!--    document.write('arr = [' + arr + ' ] <br>')-->
+<!--    fiBoNaCi(arr)-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = []
+    let result = []
+    let n = prompt("nhập chiều dài mảng")
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("nhập phần tử vị trí " + i)
+    }
+    document.write("mảng vừa nhập: arr =  [ " + arr + " ]" + "<br>")
+
+    // tìm max
+    let max = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+            max = arr[i]
+        }
+    }
+    // tìm fibonacci (theo cách của a, e có thể đổi theo cách của e, miễn đúng là đc)
+    let fibonacci = []
+    let n1 = 1
+    let n2 = -1
+    while (n1 <= max) {
+        n1 += n2
+        n2 = n1 - n2
+        fibonacci.push(n1)
+    }
+
+    for (let i = 0; i < arr.length; i++) {      // duyệt mảng nhập vào
+        let flag = true
+        if (fibonacci.includes(arr[i]) === true && arr[i] > 1) {    // nếu arr[i] thuộc fibonacci và từ 2 trở lên
+            console.log(arr[i])
+            for (let j = 2; j < arr[i]; j++) {    // tìm số nguyên tố
+                if (arr[i] % j === 0) {
+                    console.log(arr[i])
+                    flag = false
+                    break
+                }
+            }
+            if (flag) {
+                result.push(arr[i])    // thêm vào result
+            }
+        }
+    }
+    result.sort(function (a, b) {    // sort lại cho đẹp
+        return a - b
+    })
+    document.write("mảng chứa các phần tử của arr vừa thuộc dãy fibonacci vừa là số nguyên tố: " +
+        "<br>" + " result = [ " + result + " ]")
+    // oke chưa
+
+</script>
+</body>
+</html>

@@ -40,7 +40,6 @@
     let key = prompt('nhập chuỗi')
     let arr = key.split(' ') // tách chuỗi thành mảng theo khoảng trắng
 
-
     function chuanHoa() {
         let kq = '';
         let tmp;
@@ -54,19 +53,19 @@
         document.write('Kết quả chuẩn hoá : ' + kq.trim() + '<br>')   // xoá khoang trắng cuối mảng
     }
     chuanHoa()
-    function daiNhat() {
-        let max = 0;
-        let x;
-        for (let j = 0; j < arr.length; j++) {
-            if (max < arr[j].length) {
-                max = arr[j].length
-                x = arr[j]
-            }
-        }
-        document.write('Từ dài nhất là ' + x)
-
-    }
-    daiNhat()
+    // function daiNhat() {
+    //     let max = 0;
+    //     let x;
+    //     for (let j = 0; j < arr.length; j++) {
+    //         if (max < arr[j].length) {
+    //             max = arr[j].length
+    //             x = arr[j]
+    //         }
+    //     }
+    //     document.write('Từ dài nhất là ' + x)
+    //
+    // }
+    // daiNhat()
 
 </script>
 

@@ -12,16 +12,31 @@
     let i ;
     for ( i = 0 ; i < h -1 ; i++){
         for (let j = 0 ; j < 2 * h -1 ; j ++ ){
+            if (i === 0){
+                document.write("")
+            }else
             if (j === k -i || j === k + i){
-                document.write(' * ')
+                document.write(' '+ i +' ')
             }else {
                 document.write(' &nbsp;&nbsp;')
             }
         }document.write('<br>')
     }
-    for ( i = 0 ; i <2 * h - 1; i++ ){
-        document.write(' * ')
+    for ( i = h ; i >= 1 ; i--){
+        for (let j = 0 ; j < 2 * h -1 ; j ++ ){
+            if (i === 0){
+                document.write("")
+            }else
+            if (j === k -i || j === k + i){
+                document.write(' '+ i +' ')
+            }else {
+                document.write(' &nbsp;&nbsp;')
+            }
+        }document.write('<br>')
     }
+    // for ( i = 0 ; i <2 * h - 1; i++ ){
+    //     document.write(' * ')
+    // }
 </script>
 </body>
 </html>

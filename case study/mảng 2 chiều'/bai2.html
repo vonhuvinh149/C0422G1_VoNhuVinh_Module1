@@ -6,27 +6,48 @@
 </head>
 <body>
 <script>
-
-    function sum(m, n) {
-        let length = prompt('nhập độ dài mảng m')
-        let length1 = prompt('nhập độ dài mảng n')
-        for (let i = 0 ; i < length ; i++){
-            n = []
-            for (let j = 0 ; j < length1 ; j++){
-                n[j] = +prompt('nhập giá trị phần tử của mảng n thứ '+ (i+1) + ' tại vị trí '+ j)
-            }
-            m[i] = n
-        }document.write('m = [ ')
-        for (let k = 0 ; k < m.length ; k++){
-            document.write('[ '+ m[k] +' ]')
-        }document.write(' ] <br>')
+    let m = prompt('nhap do dai mang')
+    let n  = prompt('nhaap do dai mang 2')
+    let  array = []
+    let arr = []
+    for (let  i = 0 ; i < m ; i++){
+        arr = []
+        for (let j = 0 ; j < n ; j++ ){
+            arr[j] = prompt('nhapj gias tri mang arr')
+        }array[i] = arr
     }
-    //// phần còn lại nhát làm quá :V
-    let a = []
-    let b = []
-    sum(a, b)
+    console.log(number)
+    function checkPrimeNum(number) {
+        let flag = true
+        if (number > 1) {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    flag = false
+                    break
+                }
+            }
+            if (flag) {
+                console.log(number)
+                return true
+            }
+        }
+    }
 
+    function listsPrimeNum(array) {
+        let result = []
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (checkPrimeNum(array[i][j])) {
+                    result.push(array[i][j])
+                }
+            }
+        }
+        document.write("các phần tử trong mảng là số nguyên tố: " + result + "<br>")
+        document.write("số lượng các phần tử trong mảng là: " + result.length)
 
+    }
+
+    listsPrimeNum(array)
 </script>
 </body>
 </html>

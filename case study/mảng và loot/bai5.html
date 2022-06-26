@@ -5,20 +5,50 @@
     <title>Title</title>
 </head>
 <body>
+<p id="menu1">  </p>
+
+<p>
+    <button type="button" onclick="orderMenu()">nhấn để gọi món</button>
+</p>
 <script>
-    // Bài 5: Giả sử menu của chúng ta có các loại thức uống như sau:
-    //     Cafe
-    // Cam vắt
-    // Nước ép cà rốt
-    // Nước ép cà chua
-    // Nước lọc
-    // Nước dừa
-    // Viết một chương trình gọi thức uống đơn giản.
-    //     Gợi ý: Trước tiên in ra màn hinh danh sách các loại thức uống cho người dùng chọn lựa
-    // Đánh dấu theo thứ tự 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa), 7(thoát gọi món)
-    // Khi người dùng lựa chọn 1 trong số các thức uống, chương trình sẽ hiện đơn giá của thức uống đó và cho phép người dùng nhập số lượng. Cuối cùng hiển thị tổng số tiền người dùng cần phải trả.
-    //     Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống, kết thúc quá trình đặt thức uống khi người nhấn số 7
+
+    let menu = ['Coffe', 'Cam vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'Nước lọc', ' Nước dừa']
+    // stt= [1,2,3,4,5,6]
+    let arr2 = [15000, 20000, 30000, 30000, 5000, 35000];
+    for (let i = 0; i < menu.length; i++) {
+        document.getElementById('menu1').innerHTML+=(i+1)+')'+menu[i]+'<br>'
+    }
+    function orderMenu() {
+        let sum = 0;
+        let a=0
+        do {
+            a=parseInt(prompt('nhập số của món cần order'))
+            if (a > 7 || a < 1) {
+                alert('Bạn nhập sai rồi, vui lòng nhập lại')
+                break;
+            } else if (a === 7) {
+                alert('tổng tiền của bạn là:'+''+sum)
+                break;
+            }else{
+                for (let j = 0; j <arr2.length ; j++) {
+                    if (a-1===j){
+                        alert('Giá tiền là'+arr2[j])
+                        let b= +prompt('Số lượng')
+                        sum +=arr2[j]*b
+                        break;
+                    }
+
+                }
+
+            }
+
+        } while (a <= 7)
+    }
+
+
+
 
 </script>
+
 </body>
 </html>

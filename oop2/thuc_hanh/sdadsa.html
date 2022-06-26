@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="creat()">Tao moi</button>
+<button onclick="out()"> xuat</button>
+<script>
+    class Bank {
+        constructor(account, nameacc, namebank, total) {
+            this.account = account;
+            this.nameacc = nameacc;
+            this.namebank = namebank;
+            this.total = total;
+
+        }
+
+        getAccount() {
+            return this.account;
+        }
+
+        setAccount(account) {
+            this.account = account;
+        }
+
+        getNameacc() {
+            return this.nameacc;
+        }
+
+        setNameacc(nameacc) {
+            this.nameacc = nameacc
+        }
+
+        getNamebank() {
+            return this.namebank
+        }
+
+        setNamebank(namebank) {
+            this.namebank = namebank
+        }
+
+        getTotal() {
+            return this.total
+        }
+
+        setTotal(total) {
+            this.total = total
+        }
+
+        toString() {
+            let arr = []
+            arr.push(this.getAccount())
+            arr.push(this.getNameacc())
+            arr.push(this.getNamebank())
+            arr.push(this.getTotal())
+            return arr
+        }
+
+    }
+
+    let arr1 = []
+
+    function creat() {
+        let acc = prompt("nhap tai khoan  ");
+        let accName = prompt("ten tai khoan ");
+        let namBank = prompt("ten ngan hang ");
+        let total = prompt("nhap tien ")
+        //let newAcc= new Bank(acc,accName,namBank,total);
+        let newAcc = new Bank()
+        newAcc.setAccount(acc)
+        newAcc.setNameacc(accName)
+        newAcc.setNamebank(namBank)
+        newAcc.setTotal(total)
+        arr1.push(newAcc)
+    }
+
+    function out() {
+        for (let i = 0; i < arr1.length; i++) {
+            document.write(arr1[i].toString() + "<br>");
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

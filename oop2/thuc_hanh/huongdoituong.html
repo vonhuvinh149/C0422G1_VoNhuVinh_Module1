@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="create()">thêm sản phẩm mới</button>
+<p id="result"> </p>
+<script>
+    class Phone {
+        constructor(name, gia, hang, mau) {
+            this.name = name
+            this.gia = gia
+            this.hang = hang
+            this.mau = mau
+        }
+
+        getName() {
+            return this.name
+        }
+
+        getGia() {
+            return this.gia
+        }
+
+        getHnag() {
+            return this.hang
+        }
+
+        getMau() {
+            return this.mau
+        }
+
+        setName(name) {
+            this.name = name
+        }
+
+        setGia(gia) {
+            this.gia = gia
+        }
+
+        setHang(hang) {
+            this.hang = hang
+        }
+
+        setMau(mau) {
+            this.mau = mau
+        }
+
+    }
+
+    let nokia = new Phone("lumia", 200, "NOKIA", "red")
+    let samsung = new Phone("galaxy", 50, "SAMSUNG", "blue")
+    let arr = [nokia, samsung]
+
+    function display() {
+        let str = "<table border='1' cellspacing='0' cellpadding='10'>" +
+            "<tr>" +
+            "<th> Tên </th>" +
+            "<th> Giá </th>" +
+            "<th> Hãng</th>" +
+            "<th> Màu </th>" +
+            "<th>thêm hoặc xoá</th>" +
+            "</tr>"
+
+        for (let i = 0; i < arr.length; i++) {
+            str += "<tr>" +
+                "<td>" + arr[i].getTen() + "</td>" +
+                "<td>" + arr[i].getGia() + "</td>" +
+                "<td>" + arr[i].getHang() + "</td>" +
+                "<td>" + arr[i].getMau() + "</td>" +
+                "<td>" +
+                "<button type='button' onclick='update(" + i + ")'>Update</button>" +
+                "<button type='button' onclick='update(" + i + ")'>Update</button>" +
+                "</td>" +
+                "</tr>"
+        }
+        str += "</table>" ;
+        document.getElementById('result').innerHTML = str
+    }
+    display()
+
+
+</script>
+</body>
+</html>

@@ -10,97 +10,199 @@
 <p id="display"> </p>
 <script>
     class Phone {
-        constructor(name, price, color, producer) {
-            this.name = name;
-            this.price = price;
-            this.color = color;
-            this.producer = producer;
+        constructor(ten, gia, hang, mau) {
+            this.ten = ten
+            this.gia = gia
+            this.hang = hang
+            this.mau = mau
         }
 
-        setName(name) {
-            this.name = name;
+        getTen() {
+            return this.ten
         }
 
-        setPrice(price) {
-            this.price = price;
+        getGia() {
+            return this.gia
         }
 
-        setColor(color) {
-            this.color = color;
+        getHang() {
+            return this.hang
         }
 
-        setProducer(producer) {
-            this.producer = producer;
+        getMau() {
+            return this.mau
         }
 
-        getName() {
-            return this.name;
+        setTen(name) {
+            this.ten = name
         }
 
-        getPrice() {
-            return this.price;
+        setGia(price) {
+            this.gia = price
         }
 
-        getColor() {
-            return this.color;
+        setHang(hang) {
+            this.hang = hang
         }
 
-        getProducer() {
-            return this.producer;
+        setMau(mau) {
+            this.mau = mau
         }
+
     }
 
-    let nokia = new Phone("nokia", 100, "red", "nokia");
-    let samsung = new Phone("A7", 100, "red", "samsung");
-    let arrPhone = [nokia, samsung];
+    let samsung = new Phone("Note7", 200,"SAMSUNG" , "red")
+    let xiaomi = new Phone("k30pro", 500, "XIAOMI", "black")
+    let apple = new Phone("ip13", 400, "APPLE", "yellow")
+    let arr = [samsung, xiaomi, apple]
 
     function display() {
-        let sout = "<table cellspacing='0' cellpadding='10' border='1px' >" +
-            "<tr>" +
-            "<th> Name</th>" +
-            "<th> Price</th>" +
-            "<th> Color</th>" +
-            "<th> Producer</th>" +
-            "</tr>"
-        for (let i = 0; i < arrPhone.length; i++) {
-            sout += "<tr>"
-            sout += "<td>" + arrPhone[i].getName() + "</td><br>" +
-                "<td>" + arrPhone[i].getPrice() + "</td>" +
-                "<td>" + arrPhone[i].getColor() + "</td>" +
-                "<td>" + arrPhone[i].getProducer() + "</td>" +
-                "<td><button type='button' onclick='edit(" + i + ")'> Edit</button></td>"+
-                "<td><button type='button' onclick='remove(" + i + ")'> Delete</button> </td>"
-            sout += "</tr>";
+        let str = "<table border = '1px' cellpadding='10' cellspacing='0'>\n" +
+            "<tr>\n" +
+            "       <th>tên</th>\n" +
+            "       <th>giá</th>\n" +
+            "       <th>hãng</th>\n" +
+            "       <th>màu</th>\n" +
+             "      <th>cập nhật hoạc xoá</th>\n" +
+            "</tr>";
+
+        for (let i = 0; i < arr.length ; i++) {
+            str += "<tr>" +
+                "<td>" + arr[i].getTen() + "</td>" +
+                "<td>" + arr[i].getGia() + "</td>" +
+                "<td>" + arr[i].getHang() + "</td>" +
+                "<td>" + arr[i].getMau() + "</td>" +
+                "<td>" +
+                "<button type='button' onclick='update(" + i + ")'>Update</button>" +
+                "<button type='button' onclick='remove(" + i + ")'>delete</button>" +
+                "</td>" +
+                "</tr>"
         }
-        sout += "</table>";
-        document.getElementById("display").innerHTML = sout;
-    }
-    display();
+        str += "</table>";
+        document.getElementById("display").innerHTML = str;
+
+    }display()
 
     function create() {
-        let name = prompt('Input name:');
-        let price = prompt('Input price:');
-        let color = prompt('Input color:');
-        let producer = prompt('Input producer:');
-        let newPhone = new Phone(name, price, color, producer);
-        arrPhone.push(newPhone);
-        display();
+        let ten = prompt('nhập tên dt')
+        let gia = prompt('nhập giá tiền')
+        let hang = prompt('nhập hãng ')
+        let mau = prompt('mau')
+        let newPhone = new Phone(ten , gia , hang , mau)
+        arr.push(newPhone)
+        display() ;
     }
-    function edit(index) {
-        let name = prompt('Input name:');
-        let price = prompt('Input price:');
-        let color = prompt('Input color:');
-        let producer = prompt('Input producer:');
-        arrPhone[index].setName(name);
-        arrPhone[index].setPrice(price);
-        arrPhone[index].setColor(color);
-        arrPhone[index].setProducer(producer);
-        display();
+    function update(index) {
+        let ten = prompt('nhập tên dt')
+        let gia = prompt('nhập giá tiền')
+        let hang = prompt('nhập hãng ')
+        let mau = prompt('mau')
+        arr[index].setTen(ten)
+        arr[index].setGia(gia)
+        arr[index].setHang(hang)
+        arr[index].setMau(mau)
+        display() ;
     }
     function remove(index) {
-        arrPhone.splice(index,1);
-        display();
+        arr.splice(index , 1);
+      display();
     }
+
+    //     class Phone {
+    //     constructor(name, price, color, producer) {
+    //     this.name = name;
+    //     this.price = price;
+    //     this.color = color;
+    //     this.producer = producer;
+    // }
+    //
+    //     setName(name) {
+    //     this.name = name;
+    // }
+    //
+    //     setPrice(price) {
+    //     this.price = price;
+    // }
+    //
+    //     setColor(color) {
+    //     this.color = color;
+    // }
+    //
+    //     setProducer(producer) {
+    //     this.producer = producer;
+    // }
+    //
+    //     getName() {
+    //     return this.name;
+    // }
+    //
+    //     getPrice() {
+    //     return this.price;
+    // }
+    //
+    //     getColor() {
+    //     return this.color;
+    // }
+    //
+    //     getProducer() {
+    //     return this.producer;
+    // }
+    // }
+    //
+    //     let nokia = new Phone("nokia", 100, "red", "nokia");
+    //     let samsung = new Phone("A7", 100, "red", "samsung");
+    //     let arrPhone = [nokia, samsung];
+    //
+    //     function display() {
+    //     let sout = "<table border='1px'>\n" +
+    //     "<tr>\n" +
+    //     "<th>Name</th>\n" +
+    //     "<th>Price</th>\n" +
+    //     "<th>Color</th>\n" +
+    //     "<th>Producer</th>\n" +
+    //     "</tr>\n"
+    //     for (let i = 0; i < arrPhone.length; i++) {
+    //     sout += "<tr>"
+    //     sout += "<td>" + arrPhone[i].getName() + "</td>\n" +
+    //     "<td>" + arrPhone[i].getPrice() + "</td>\n" +
+    //     "<td>" + arrPhone[i].getColor() + "</td>\n" +
+    //     "<td>" + arrPhone[i].getProducer() + "</td>\n" +
+    //     "<td><button type='button' onclick='edit(" + i + ")'> Edit</button></td>"+
+    //     "<td><button type='button' onclick='remove(" + i + ")'> Delete</button> </td>"
+    //     sout += "</tr>";
+    // }
+    //     sout += "</table>";
+    //     document.getElementById("display").innerHTML = sout;
+    // }
+    //
+    //     display();
+    //
+    //     function create() {
+    //     let name = prompt('Input name:');
+    //     let price = prompt('Input price:');
+    //     let color = prompt('Input color:');
+    //     let producer = prompt('Input producer:');
+    //     let newPhone = new Phone(name, price, color, producer);
+    //     arrPhone.push(newPhone);
+    //     display();
+    // }
+    //     function edit(index) {
+    //     let name = prompt('Input name:');
+    //     let price = prompt('Input price:');
+    //     let color = prompt('Input color:');
+    //     let producer = prompt('Input producer:');
+    //     arrPhone[index].setName(name);
+    //     arrPhone[index].setPrice(price);
+    //     arrPhone[index].setColor(color);
+    //     arrPhone[index].setProducer(producer);
+    //     display();
+    // }
+    //     function remove(index) {
+    //     arrPhone.splice(index,1);
+    //     display();
+    // }
+
+
 </script>
 </body>
 </html>

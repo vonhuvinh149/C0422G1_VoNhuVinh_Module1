@@ -6,39 +6,39 @@
 </head>
 <body>
 <script>
-    function minmax() {
-        let m = prompt('nhap do dai mang m ')
-        let n = prompt('nhap do dai mang n')
+    function minMax(m , n) {
         let arr = []
-        let arr2d = []
-        for (let i = 0; i < m; i++) {
+        let arr2 = []
+        for (let i = 0; i < m ; i++) {
             arr=[]
-            for (let j = 0; j < n; j++) {
-                arr[j] = +prompt("arr2d[ " + i + "] [ " + j + "]")
+            for (let j = 0 ; j < n ; j++) {
+                arr[j] = +prompt("arr2[ " + i + "] [ " + j + "]")
             }
-            arr2d[i] = arr
+            arr2[i] = arr
         }
-        document.write("arr2d = [ " )
-        for (let i = 0; i < arr2d.length; i++) {
-            document.write("[" + arr2d[i] + "] ")
+        document.write("arr2 = [ " )
+        for (let i = 0; i < arr2.length; i++) {
+            document.write("[" + arr2[i] + "] ")
         }
         document.write("]" +"<br>")
-        let min = arr2d[0][0];
-        let max = arr2d[0][0];
-        for (let i=0; i<m; i ++) {
-            for (let j=0; j<n; j++){
-                if (arr2d[i][j] > max) {
-                    max = arr2d[i][j]
+        let min = arr2[0][0];
+        let max = arr2[0][0];
+        for (let i=0; i < arr2.length; i ++) {
+            for (let j=0; j < n ; j++){
+                if (arr2[i][j] > max) {
+                    max = arr2[i][j]
                 }
-                if (arr2d[i][j] < min) {
-                    min = arr2d[i][j]
+                if (arr2[i][j] < min) {
+                    min = arr2[i][j]
                 }
             }
         }
-        document.write("So nho nhat la " + min + "<br>")
-        document.write("So lon nhat la " + max)
+        document.write("So nho nhat la : " + min + "<br>")
+        document.write("So lon nhat la : " + max)
     }
-    minmax()
+    let a = prompt('nhap do dai mang m ')
+    let b = prompt('nhap do dai mang n')
+    minMax(a,b)
 </script>
 </body>
 </html>

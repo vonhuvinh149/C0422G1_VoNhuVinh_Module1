@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="create()">Thêm sản phẩm mới</button>
+<p id="display"></p>
+<script>
+    class phone {
+        constructor(name, gia, color, hang) {
+            this.name = name;
+            this.gia = gia;
+            this.color = color;
+            this.hang = hang;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        getColor() {
+            return this.color;
+        }
+
+        getHang() {
+            return this.hang;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setGia(gia) {
+            this.gia = gia;
+        }
+
+        setColor(color) {
+            this.color = color;
+        }
+
+        setHang(hang) {
+            this.hang = hang;
+        }
+    }
+
+
+    let samsung = new phone("SamSums6", 200, "SAMSUNG", "red")
+    let nokia = new phone("1280", 200, "NOKIA", "black")
+    let arr = [samsung, nokia]
+
+    function display() {
+        let str = "<table border='1' cellspacing='0' cellpadding='10'>" +
+            " <tr> " +
+            "<th> TÊN điện thoại</th>" +
+            "<th> GIÁ</th>" +
+            "<th> hãng</th>" +
+            "<th>màu</th>" +
+            "<th>thêm và xoá</th>" +
+            "</tr>";
+
+        for (let i = 0; i < arr.length; i++) {
+            str += "<tr>" +
+                "<td>" + arr[i].getName() + "</td>" +
+                "<td>" + arr[i].getGia() + "</td>" +
+                "<td>" + arr[i].getHang() + "</td>" +
+                "<td>" + arr[i].getColor() + "</td>" +
+                "</tr>"
+            str += "</table>"
+        }
+
+    }
+
+    display()
+    document.getElementById('display').innerHTML = str
+</script>
+</body>
+</html>
